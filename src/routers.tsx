@@ -1,12 +1,13 @@
-import { Route, Routes } from "react-router-dom";
+import { Routes, Route } from 'react-router-dom';
 import { Home } from "./pages/Home";
-// import App from "./App";
+import MainLayout from "./layout/MainLayout";
 
 export const Router = () => {
    return (
      <Routes>
-        <Route path="/" element={<Home />}/>
-        {/*<Route path="/app" element={<App />}/>*/}
+        <Route path="/" element={<MainLayout />}>
+           <Route index element={<Home />} />
+        </Route>
      </Routes>
    )
 };
